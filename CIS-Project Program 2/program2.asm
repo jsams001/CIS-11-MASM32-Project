@@ -16,42 +16,53 @@ includelib \masm32\lib\kernel32.lib
 .data
 Mess db "Your string reversed is in the console window.", 0
 Top db "Completed", 0
-show_text PROTO :DWORD
+original_text PROTO :DWORD
 reverse_text PROTO :DWORD
 
-.code                       ; Tell MASM where the code starts
-start:                          ; The CODE entry point to the program
-    call main                   ; branch to the "main" procedure
+.code                       
+start:                          
+    call main                   
     exit
 
 main proc
 
-    LOCAL txtinput:DWORD        ; a "handle" for the text returned by "input"
-    mov txtinput, input("Type some text at the cursor : ")
-    invoke show_text, txtinput
+    LOCAL txtinput:DWORD        
+    mov txtinput, input("Type your name: ")
+    invoke original_text, txtinput
 	invoke reverse_text, txtinput ; procedure used to reverse the string
 	invoke MessageBox,NULL,Addr Mess,Addr Top,MB_OK
     ret
 main endp
 
-show_text proc string:DWORD
+original_text proc string:DWORD
 
-    print chr$("This is what you typed at the cursor",13,10,"     *** ")
-    print string                ; show the string at the console
-    print chr$(" ***",13,10)
+    print chr$("This is your name: ",13,10)
+    print string
+	print chr$(13,10)          
     ret
-show_text endp 
+original_text endp 
 
-reverse_text proc string:DWORD
+reverse_text proc uses eax ebx ecx esi string:DWORD
 
 	LOCAL reversestr:DWORD
-	mov eax, string
-	mov ebx, SIZEOF string
+
+	lea ebx, reversestr					; ebx traverses through the reversestring label
+	mov ecx, SIZEOF string				; ecx would be used to get the last value of the string, and 
+										; would decrement until you hit the first value of the string
+	lea eax, string[ecx]				; eax points to the first value in the string
+
+	reverse:
+		mov esi, [eax]
+		mov [ebx], esi
+		inc ebx
+		dec eax
+		loop reverse
+		jmp PrintRev 
 
 	PrintRev:
-		print chr$("This is the string you typed in backwards",13,10,"     *** ")
+		print chr$("This is your name backwards:",13,10)
 		print reversestr                ; show the string at the console
-		print chr$(" ***",13,10)
+		print chr$(13,10)
     ret
 reverse_text endp 
 
