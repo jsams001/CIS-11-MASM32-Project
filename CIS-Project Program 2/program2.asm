@@ -31,18 +31,13 @@ originalstr DWORD 60 DUP(?)
 reversestr DWORD 60 DUP(?)
 
 .code                       
-start:                          
-    call main                   
-    exit
-
-main proc
-        
+start:                        
+  
     mov originalstr, input("Type your name: ")
     invoke original_text, originalstr
 	call reverse_text								; procedure used to reverse the string
-	invoke MessageBox,NULL,Addr Message,Addr Top,MB_OK
-    ret
-main endp
+	invoke MessageBox,NULL,Addr Message,Addr Top,MB_OK          
+    exit
 
 original_text proc string:DWORD
 
