@@ -16,9 +16,7 @@ onto the same drive of which your projects are on. Once you build the files succ
 you can run the program in Visual Studio, or navigate into the Debug folder for each
 respective program and run the .exe file for each.
 
-The explicit requirements for the project can be found 
-[here](C:\Users\MVC Student\Documents\CIS11 Course Project.docx). Each program is listed 
-in greater detail below.
+Each program is listed in greater detail below.
 
 ## Program 1 - Rapper Ad-libs
 ### by Marcos Padilla
