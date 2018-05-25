@@ -16,7 +16,8 @@ onto the same drive of which your projects are on. Once you build the files succ
 you can run the program in Visual Studio, or navigate into the Debug folder for each
 respective program and run the .exe file for each.
 
-Each program is listed in greater detail below.
+The explicit requirements for the final project can be
+found [here](https://github.com/jsams001/CIS-11-MASM32-Project/blob/master/Requirements.docx). Each program is listed in greater detail below.
 
 ## Program 1 - Rapper Ad-libs
 ### by Marcos Padilla
