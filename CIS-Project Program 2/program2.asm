@@ -1,5 +1,5 @@
 ; CIS-11 Final Project - Program 2
-; Group: Ctrl See - Jondell Samson, Marcos Padilla, Cesar 
+; Group: Ctrl See - Jondell Samson, Marcos Padilla, Cesar Ahumada
 ; Purpose: User types in name and program reverses it in console. 
 ; User types ok in message box to terminate program
 ; Note: Must have masm32 and Project folders all installed
