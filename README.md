@@ -1,6 +1,6 @@
 # CIS-11 MASM32 Project
 CIS-11 MASM32 Win32 Application Project 
-Group: Ctrl See - Jondell Samson, Marcos Padilla, Cesar Ahumuda
+Group: Ctrl See - *REDACTED*, Marcos Padilla, Cesar Ahumuda
 
 The purpose of this project was to create three individual Windows programs 
 coded in assembly through Visual Studio. Each group member worked on one 
