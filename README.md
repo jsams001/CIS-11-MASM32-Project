@@ -34,7 +34,7 @@ the pre-built in MASM32 procedure szCMP. Because of this, the first letter of th
 must be input in lowercase in order for the correct ad-lib to be printed out onto the message box.
 
 ## Program 2 - Name Reversal
-### by Jondell Samson
+### by jsams001
 Program 2 of the final MASM32 Project takes in a name from user input, 
 and reverses that name in the console window. The user is then shown a 
 message box explicitly stating that the program has finished its reversal,
